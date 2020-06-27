@@ -22,6 +22,10 @@ fun computeFibbonaciNumber(position: Int, recursion: Boolean = false): Int {
     return j
 }
 
+fun computeFibbonachiArray(start: Int, end: Int): List<Int> {
+    return (start..end).map { computeFibbonaciNumber(it) }
+}
+
 fun recursiveFibbonachi(previous: Int, current: Int, stepsLeft: Int): Int {
     if (stepsLeft < 0) return 1
     return when (stepsLeft) {
