@@ -3,14 +3,17 @@ package com.gitTraining
 fun computeFibbonaciNumber(position: Int, recursion: Boolean = false): Int {
     if (recursion) return recursiveFibbonachi(1, 1, position - 2)
 
+    var notNullPosition = position
+    if (notNullPosition == null) {
+        notNullPosition = 1
+    }
     var i = 1
     var j = 1
 
-    if (position <= 2) return 1
-
+    if (notNullPosition <= 2) return 1
 
     var currentPosition = 2
-    while (currentPosition < position) {
+    while (currentPosition < notNullPosition) {
         val temp = i
         i = j
         j += temp
